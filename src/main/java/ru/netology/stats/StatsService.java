@@ -1,22 +1,22 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public int totalSalesAmount(int[] montArrey) {
+    public long totalSalesAmount(long[] montArrey) {
         int totalAmount = 0;
-        for (int sale : montArrey) {
+        for (long sale : montArrey) {
             totalAmount += sale;
         }
         return totalAmount;
     }
 
-    public int averageSales(int[] montArrey) {
-        int temp = montArrey.length;
-        int metod = totalSalesAmount(montArrey);
-        int averageAmount = metod / temp;
+    public long averageSales(long[] montArrey) {
+        long temp = montArrey.length;
+        long metod = totalSalesAmount(montArrey);
+        long averageAmount = metod / temp;
         return averageAmount;
     }
 
-    public int maximumSaleDay(int[] montArrey) {
+    public long maximumSaleDay(long[] montArrey) {
         int maxSales = 0;
 
         for (int i = 0; i < montArrey.length; i++) {
@@ -27,7 +27,7 @@ public class StatsService {
         return maxSales;
     }
 
-    public int minimumSalesDay(int[] montArrey) {
+    public long minimumSalesDay(long[] montArrey) {
         int minSales = 0;
         for (int i = 0; i < montArrey.length; i++) {
             if (montArrey[i] < montArrey[minSales]) {
@@ -37,20 +37,22 @@ public class StatsService {
         return minSales;
     }
 
-    public int minAverageSales(int[] montArrey) {
+    public long minAverageSales(long[] montArrey) {
         int min = 0;
+        long averageSalesAmount = averageSales(montArrey);
         for (int i = 0; i < montArrey.length; i++) {
-            if (montArrey[i] >= averageSales(montArrey)) {
+            if (montArrey[i] >= averageSalesAmount) {
                 min++;
             }
         }
         return min;
     }
 
-    public int maxAveregeSales(int[] montArrey) {
+    public long maxAveregeSales(long[] montArrey) {
         int max = 0;
+        long averageSalesAmount = averageSales(montArrey);
         for (int i = 0; i < montArrey.length; i++){
-            if (montArrey[i] <= averageSales(montArrey)){
+            if (montArrey[i] <= averageSalesAmount){
                 max++;
             }
         }

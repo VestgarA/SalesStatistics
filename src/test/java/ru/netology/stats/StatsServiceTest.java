@@ -7,65 +7,65 @@ public class StatsServiceTest {
     @Test
     public void ofAllSales() {
         StatsService cervice = new StatsService();
-        int[] monthArray = {
+        long[] monthlySalesReport = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expectedAmount = 180;
-        int actualAmount = cervice.totalSalesAmount(monthArray);
+        long actualAmount = cervice.totalSalesAmount(monthlySalesReport);
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
     @Test
     public void averageAmount(){
         StatsService service = new StatsService();
 
-        int[] montArray = {
+        long[] monthlySalesReport = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expectedMontArray = 15;
-        int actualMontArray = service.averageSales(montArray);
+        long actualMontArray = service.averageSales(monthlySalesReport);
         Assertions.assertEquals(expectedMontArray, actualMontArray);
     }
 
     @Test
     public  void maxAmount(){
         StatsService service = new StatsService();
-        int[] montArray = {
+        long[] monthlySalesReport = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expectedMaxSales = 5;
-        int actualMaxales = service.maximumSaleDay(montArray);
+        long actualMaxales = service.maximumSaleDay(monthlySalesReport);
         Assertions.assertEquals(expectedMaxSales, actualMaxales);
     }
 
     @Test
     public void minAmount(){
         StatsService cervice = new StatsService();
-        int[] montArrey = {
-                8, 15, 13, 15, 17, 20, 19, 2, 7, 14, 14, 18
+        long[] monthlySalesReport = {
+                8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
-        int expectedMinDay = 7;
-        int actualMinDay = cervice.minimumSalesDay(montArrey);
+        int expectedMinDay = 8;
+        long actualMinDay = cervice.minimumSalesDay(monthlySalesReport);
         Assertions.assertEquals(expectedMinDay, actualMinDay);
     }
 
     @Test
     public void minAverageSales(){
         StatsService cervice = new StatsService();
-        int[] montArrey = {
+        long[] monthlySalesReport = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expectedAveregeSales = 7;
-        int actualAveregeSales = cervice.minAverageSales(montArrey);
+        long actualAveregeSales = cervice.minAverageSales(monthlySalesReport);
         Assertions.assertEquals(expectedAveregeSales, actualAveregeSales);
     }
     @Test
     public void maxAveregeSales(){
         StatsService service = new StatsService();
-        int[] montArrey = {
+        long[] monthlySalesReport = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expectedAveregeSales = 7;
-        int actualAveregeSales = service.maxAveregeSales(montArrey);
+        long actualAveregeSales = service.maxAveregeSales(monthlySalesReport);
         Assertions.assertEquals(expectedAveregeSales, actualAveregeSales);
     }
 }
