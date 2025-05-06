@@ -39,7 +39,7 @@ public class StatsService {
 
     public int minAverageSales(long[] monthlySalesReport) {
         int min = 0;
-        int averageSalesAmount = averageSales(monthlySalesReport);
+        long averageSalesAmount = averageSales(monthlySalesReport); // Добавил long т.к. здесь ссылаемся на другой код с массивом продаж.
         for (int i = 0; i < monthlySalesReport.length; i++) {
             if (monthlySalesReport[i] >= averageSalesAmount) {
                 min++;
@@ -50,7 +50,7 @@ public class StatsService {
 
     public int maxAveregeSales(long[] monthlySalesReport) {
         int max = 0;
-        int averageSalesAmount = averageSales(monthlySalesReport);
+        long averageSalesAmount = averageSales(monthlySalesReport); // Добавил long т.к. здесь ссылаемся на другой код с массивом продаж.
         for (int i = 0; i < monthlySalesReport.length; i++) {
             if (monthlySalesReport[i] <= averageSalesAmount) {
                 max++;
