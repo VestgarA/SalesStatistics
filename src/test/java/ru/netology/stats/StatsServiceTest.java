@@ -14,8 +14,9 @@ public class StatsServiceTest {
         long actualAmount = cervice.totalSalesAmount(monthlySalesReport);
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
+
     @Test
-    public void averageAmount(){
+    public void averageAmount() {
         StatsService service = new StatsService();
 
         long[] monthlySalesReport = {
@@ -27,7 +28,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public  void maxAmount(){
+    public void maxAmount() {
         StatsService service = new StatsService();
         long[] monthlySalesReport = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
@@ -38,7 +39,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void minAmount(){
+    public void minAmount() {
         StatsService cervice = new StatsService();
         long[] monthlySalesReport = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
@@ -49,7 +50,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void minAverageSales(){
+    public void minAverageSales() {
         StatsService cervice = new StatsService();
         long[] monthlySalesReport = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
@@ -58,8 +59,9 @@ public class StatsServiceTest {
         long actualAveregeSales = cervice.minAverageSales(monthlySalesReport);
         Assertions.assertEquals(expectedAveregeSales, actualAveregeSales);
     }
+
     @Test
-    public void maxAveregeSales(){
+    public void maxAveregeSales() {
         StatsService service = new StatsService();
         long[] monthlySalesReport = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
